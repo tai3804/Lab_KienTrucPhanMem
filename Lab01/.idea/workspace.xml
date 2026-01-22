@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="683d1606-5543-4012-a774-234174831f2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MinhChung/only_orders-queue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/iuh/fit/Lab01Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/iuh/fit/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/iuh/fit/consumer/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/test/java/iuh/fit/Lab01ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/iuh/fit/Lab01Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/classes/iuh/fit/consumer/Consumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/fit-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/fit-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/surefire-reports/TEST-iuh.fit.Lab01ApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/surefire-reports/iuh.fit.Lab01ApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/target/test-classes/iuh/fit/Lab01ApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/iuh/fit/Lab01Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/iuh/fit/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/iuh/fit/model/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/iuh/fit/producer/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/test/java/iuh/fit/Lab01ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/classes/iuh/fit/Lab01Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/classes/iuh/fit/producer/Producer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/fit-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/fit-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/surefire-reports/TEST-iuh.fit.Lab01ApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/surefire-reports/iuh.fit.Lab01ApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/target/test-classes/iuh/fit/Lab01ApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="38ZST13G7MQsZe73KMeB4F7iAbW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/KienTrucPhanMem/Labs/Lab_KienTrucPhanMem/Lab01/MinhChung",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\KienTrucPhanMem\Labs\Lab_KienTrucPhanMem\Lab01\MinhChung" />
+      <recent name="E:\KienTrucPhanMem\Labs\Lab_KienTrucPhanMem\Lab01" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\KienTrucPhanMem\Labs\Lab_KienTrucPhanMem\Lab01" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="683d1606-5543-4012-a774-234174831f2a" name="Changes" comment="" />
+      <created>1769005606600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769005606600</updated>
+      <workItem from="1769005609805" duration="4505000" />
+      <workItem from="1769048958060" duration="5286000" />
+      <workItem from="1769055073497" duration="9029000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

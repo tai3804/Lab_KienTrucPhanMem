@@ -1,0 +1,30 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: root
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  producer:
+    build: ./producer_dlq
+    container_name: producer
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_USERNAME: root
+      SPRING_RABBITMQ_PASSWORD: root
+    depends_on:
+      - rabbitmq
+  consumer:
+    build: ./consumer_dlq
+    container_name: consumer
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_USERNAME: root
+      SPRING_RABBITMQ_PASSWORD: root
+    depends_on:
+      - rabbitmq
