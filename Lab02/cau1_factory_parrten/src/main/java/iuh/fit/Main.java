@@ -1,8 +1,6 @@
 package iuh.fit;
 
-import iuh.fit.entity.MomoPayment;
 import iuh.fit.entity.Payment;
-import iuh.fit.entity.VNPayPayment;
 import iuh.fit.factory.MomoFactory;
 import iuh.fit.factory.VNPayFactory;
 
