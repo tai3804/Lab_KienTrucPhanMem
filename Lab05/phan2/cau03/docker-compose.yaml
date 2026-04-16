@@ -1,0 +1,21 @@
+services:
+  my-sql:
+    container_name: sql-container
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+
+  my-php:
+    image: phpmyadmin:latest
+    container_name: php-container
+    environment:
+      PMA_HOST: my-sql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"
+    depends_on:
+      - my-sql

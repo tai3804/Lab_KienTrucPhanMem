@@ -1,0 +1,67 @@
+services:
+  traefik:
+    image: traefik:v3.6.8
+    container_name: cau10-traefik
+    command:
+      - --api.dashboard=true
+      - --providers.docker=true
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.dashboard.address=:8080
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - proxy_net
+
+  flaskapp:
+    build: ./flaskapp
+    container_name: cau10-flask
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.flask.rule=Host(`flask.localhost`)
+      - traefik.http.routers.flask.entrypoints=web
+      - traefik.http.services.flask.loadbalancer.server.port=5000
+    networks:
+      - proxy_net
+
+  mysql:
+    image: mysql:5.7
+    container_name: cau10-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: wordpressdb
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppass123
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - proxy_net
+
+  wordpress:
+    image: wordpress:latest
+    container_name: cau10-wordpress
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_NAME: wordpressdb
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass123
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.wordpress.rule=Host(`wordpress.localhost`)
+      - traefik.http.routers.wordpress.entrypoints=web
+      - traefik.http.services.wordpress.loadbalancer.server.port=80
+    networks:
+      - proxy_net
+
+volumes:
+  mysql_data:
+
+networks:
+  proxy_net:
+    driver: bridge

@@ -1,0 +1,17 @@
+services:
+  app:
+    build: ./app
+    image: cau06-app:latest
+    environment:
+      APP_ENV: production
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:alpine
+    depends_on:
+      - app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro

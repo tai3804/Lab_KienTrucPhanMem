@@ -1,0 +1,81 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: cau05-redis
+    restart: unless-stopped
+    networks:
+      - voting_net
+
+  db:
+    image: postgres:16-alpine
+    container_name: cau05-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: votesdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d votesdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - voting_net
+
+  vote:
+    build: ./vote
+    container_name: cau05-vote
+    restart: unless-stopped
+    depends_on:
+      - redis
+    ports:
+      - "5000:5000"
+    environment:
+      REDIS_HOST: redis
+    networks:
+      - voting_net
+
+  result:
+    build: ./result
+    container_name: cau05-result
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5001:5001"
+    environment:
+      PGHOST: db
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: votesdb
+      PGPORT: 5432
+    networks:
+      - voting_net
+
+  worker:
+    build: ./worker
+    container_name: cau05-worker
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_started
+      db:
+        condition: service_healthy
+    environment:
+      REDIS_HOST: redis
+      DB_HOST: db
+      DB_NAME: votesdb
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    networks:
+      - voting_net
+
+volumes:
+  postgres_data:
+
+networks:
+  voting_net:
+    driver: bridge
