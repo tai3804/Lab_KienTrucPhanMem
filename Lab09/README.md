@@ -1,3 +1,9 @@
+Lương Minh Tân - may1
+Đặng hoàn việt - may2
+Nguyễn Chí Thiện - may3
+Trần THành Tài - may4
+
+
 # Travel Booking System - Orchestration-Driven SOA
 
 He thong duoc chia thanh 4 may de de trien khai trong LAN:
